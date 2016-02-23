@@ -126,6 +126,34 @@
     "location": "[variables('Location')]",
     "properties": {
       "securityRules": [
+	  {
+          "name": "HTTP8080",
+          "properties": {
+            "description": "HTTP8080",
+            "protocol": "Tcp",
+            "sourcePortRange": "*",
+            "destinationPortRange": "8080",
+            "sourceAddressPrefix": "Internet",
+            "destinationAddressPrefix": "*",
+            "access": "Allow",
+            "priority": 300,
+            "direction": "Inbound"
+          }
+        }
+	  {
+          "name": "HTTP",
+          "properties": {
+            "description": "HTTP",
+            "protocol": "Tcp",
+            "sourcePortRange": "*",
+            "destinationPortRange": "80",
+            "sourceAddressPrefix": "Internet",
+            "destinationAddressPrefix": "*",
+            "access": "Allow",
+            "priority": 200,
+            "direction": "Inbound"
+          }
+        }
         {
           "name": "RDP_ALL",
           "properties": {
@@ -139,8 +167,8 @@
             "priority": 100,
             "direction": "Inbound"
           }
-        }
-      ]
+		}
+	  ]   
     }
   },
     {

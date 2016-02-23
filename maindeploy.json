@@ -127,6 +127,34 @@
     "properties": {
       "securityRules": [
         {
+            "name": "HTTP 80",
+            "properties": {
+              "description": "HTTP 80",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "80",
+              "sourceAddressPrefix": "Internet",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 100,
+              "direction": "Inbound"
+            }
+          },
+          {
+          "name": "HTTP 8080",
+          "properties": {
+            "description": "HTTP 8080",
+            "protocol": "Tcp",
+            "sourcePortRange": "*",
+            "destinationPortRange": "8080",
+            "sourceAddressPrefix": "Internet",
+            "destinationAddressPrefix": "*",
+            "access": "Allow",
+            "priority": 200,
+            "direction": "Inbound"
+          }
+        },
+        {
           "name": "RDP_ALL",
           "properties": {
             "description": "Port 3389",
@@ -136,7 +164,7 @@
             "sourceAddressPrefix": "Internet",
             "destinationAddressPrefix": "*",
             "access": "Allow",
-            "priority": 100,
+            "priority": 300,
             "direction": "Inbound"
           }
         }

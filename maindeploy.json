@@ -127,7 +127,7 @@
     "properties": {
       "securityRules": [
         {
-            "name": "HTTP 80",
+            "name": "HTTP_80",
             "properties": {
               "description": "HTTP 80",
               "protocol": "Tcp",
@@ -141,7 +141,7 @@
             }
           },
           {
-          "name": "HTTP 8080",
+          "name": "HTTP_8080",
           "properties": {
             "description": "HTTP 8080",
             "protocol": "Tcp",
